@@ -1,0 +1,10 @@
+$primaryColor: #59b256;
+$white: #ffffff;
+
+$breakpoint-down: ('mobile': '480px', 'tablet': '768px', 'tab-port': '1200px');
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoint-down, $size)) {
+      @content;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../global.scss";
+
+.list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+  @include breakpoint-down(tab-port) {
+    padding: 0px 20px 30px;
+  }
+
+  &-texts {
+    width: 60%;
+
+    @include breakpoint-down(mobile) {
+      width: 100%;
+    }
+  }
+
+  &-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+
+    @include breakpoint-down(mobile) {
+      padding: 0 30px;
+    }
+  }
+
+  &-category {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+
+    @include breakpoint-down(tablet) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &-product {
+    max-height: 80vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    overflow-y: scroll;
+
+    @include breakpoint-down(tab-port) {
+      width: 100%;
+    }
+
+    @include breakpoint-down(tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include breakpoint-down(mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

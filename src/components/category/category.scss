@@ -1,0 +1,35 @@
+@import '../../global.scss';
+
+.list-category-item {
+  font-size: 16px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80px;
+
+  @include breakpoint-down(tablet) {
+    height: 28px;
+    margin-bottom: 10px;
+  }
+  
+  &.active {
+    background-color: $primaryColor;
+    color: $white;
+  }
+
+  &:not(:last-child) {
+    margin-right: 80px;
+
+    @include breakpoint-down(tab-port) {
+      margin-right: 40px;
+    }
+
+    @include breakpoint-down(tab-port) {
+      margin-right: 20px;
+    }
+    
+    @include breakpoint-down(mobile) {
+      margin-right: 0;
+    }
+  }
+}

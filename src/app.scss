@@ -1,0 +1,20 @@
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import './global.scss';
+
+.app {
+  height: 100vh;
+  color: #333;
+  position: relative;
+  scroll-snap-type: y proximity;
+  overflow: scroll;
+  transition: all 0.5s ease-in-out;
+  overflow-x: hidden;
+
+  @include breakpoint-down(mobile) {
+    scroll-snap-type: none;
+  }
+  
+  > * {
+    scroll-snap-align: start;
+  }
+}

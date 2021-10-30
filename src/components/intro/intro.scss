@@ -1,0 +1,177 @@
+@import "../../global.scss";
+
+.intro {
+  display: flex;
+  height: 100vh;
+
+  @include breakpoint-down(tablet) {
+    flex-direction: column;
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-wrapper {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 50px;
+
+      @include breakpoint-down(tablet) {
+        padding: 50px 40px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+
+      @include breakpoint-down(mobile) {
+        padding: 50px 10px;
+      }
+    }
+
+    &-greet {
+      font-size: 30px;
+      font-weight: 400;
+
+      @include breakpoint-down(tab-port) {
+        font-size: 22px;
+      }
+
+      @include breakpoint-down(mobile) {
+        font-size: 20px;
+      }
+
+      span {
+        color: $primaryColor;
+      }
+    }
+
+    &-name {
+      font-size: 60px;
+      font-weight: 700;
+
+      @include breakpoint-down(tab-port) {
+        font-size: 48px;
+      }
+
+      @include breakpoint-down(tablet) {
+        margin: 24px 0 40px;
+      }
+
+      @include breakpoint-down(mobile) {
+        font-size: 48px;
+        margin: 10px 0;
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 15px;
+
+      @include breakpoint-down(tab-port) {
+        font-size: 20px;
+      }
+
+      @include breakpoint-down(tablet) {
+        margin-bottom: 40px;
+      }
+
+      @include breakpoint-down(mobile) {
+        font-size: 18px;
+      }
+
+      span {
+        color: $primaryColor;
+        font-weight: 600;
+      }
+
+      .ityped-cursor {
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 1;
+        }
+
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    &-scroll {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      bottom: 40px;
+      left: 300px;
+
+      @include breakpoint-down(tablet) {
+        display: none;
+      }
+    }
+
+    &-desc {
+      width: 90%;
+
+      @include breakpoint-down(tab-port) {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      @include breakpoint-down(tablet) {
+        width: 70%;
+      }
+    }
+  }
+
+  .right {
+    flex: 1;
+    position: relative;
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120%;
+      height: 100%;
+      clip-path: circle(86.3% at 81% 27%);
+      background-color: $primaryColor;
+
+      @include breakpoint-down(tab-port) {
+        clip-path: circle(69.3% at 88% 36%);
+      }
+
+      @include breakpoint-down(tablet) {
+        clip-path: circle(78.3% at 82% 27%);
+      }
+
+      @include breakpoint-down(mobile) {
+        clip-path: polygon(34% 0, 100% 0, 100% 100%, 33% 100%, 18% 51%);
+      }
+    }
+
+    &-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include breakpoint-down(tablet) {
+        object-fit: contain;
+      }
+
+      @include breakpoint-down(mobile) {
+        width: 70%;
+        left: 80px;
+        object-fit: cover;
+      }
+    }
+  }
+}

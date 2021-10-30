@@ -1,0 +1,110 @@
+@import "../../global.scss";
+
+.about {
+  height: 100vh;
+  display: flex;
+
+  @include breakpoint-down(mobile) {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .left,
+  .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .left {
+
+    @include breakpoint-down(mobile) {
+      width: 100%;
+    }
+
+    &-card.bg {
+      top: 50px;
+      left: 80px;
+      background-color: #333;
+      
+      @include breakpoint-down(tab-port) {
+        top: 134px;
+        left: 50px;
+      }
+
+      @include breakpoint-down(tablet) {
+        display: none;
+      }
+    }
+    
+    &-card {
+      position: absolute;
+      width: 60%;
+      height: 70vh;
+      border-radius: 30px;
+      overflow: hidden;
+
+      @include breakpoint-down(tab-port) {
+        height: 50vh;
+      }
+
+      @include breakpoint-down(tablet) {
+        width: 80%;
+      }
+
+      @include breakpoint-down(mobile) {
+        height: 40vh;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .right {
+
+    &-wrapper {
+      height: 40%;
+      padding-right: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      @include breakpoint-down(tablet) {
+        height: 80%;
+        justify-content: center;
+      }
+    
+      @include breakpoint-down(mobile) {
+        padding-right: 0;
+      }
+    }
+
+    &-title {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    &-sub {
+      font-size: 18px;
+      font-weight: 500;
+
+      @include breakpoint-down(tab-port) {
+        margin: 18px 0;
+      }
+    }
+
+    &-desc {
+      @include breakpoint-down(mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+}
