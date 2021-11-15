@@ -27,9 +27,7 @@ const Product = ({ img, videoId }) => {
           <img src={Video} alt="" />
         </div>
       </div>
-      <>
-        <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoId} onClose={() => setOpen(false)} />
-      </>
+      <ModalVideo channel='youtube' autoplay isOpen={isOpen} videoId={videoId} onClose={() => setOpen(false)} />
     </div>
   )
 }

@@ -5,7 +5,6 @@
   padding: 6px 8px;
   border-radius: 10px;
   cursor: pointer;
-  width: 80px;
 
   @include breakpoint-down(tablet) {
     height: 28px;

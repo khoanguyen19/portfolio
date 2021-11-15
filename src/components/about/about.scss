@@ -4,7 +4,11 @@
   height: 100vh;
   display: flex;
 
-  @include breakpoint-down(mobile) {
+  @include breakpoint-down(tab-port) {
+    height: 90vh;
+  }
+
+  @include breakpoint-down(tablet) {
     flex-direction: column-reverse;
     text-align: center;
     justify-content: center;
@@ -31,12 +35,12 @@
       left: 80px;
       background-color: #333;
       
-      @include breakpoint-down(tab-port) {
-        top: 134px;
-        left: 50px;
-      }
+      // @include breakpoint-down(tab-port) {
+      //   top: 134px;
+      //   left: 50px;
+      // }
 
-      @include breakpoint-down(tablet) {
+      @include breakpoint-down(tab-port) {
         display: none;
       }
     }
@@ -50,9 +54,6 @@
 
       @include breakpoint-down(tab-port) {
         height: 50vh;
-      }
-
-      @include breakpoint-down(tablet) {
         width: 80%;
       }
 
@@ -77,7 +78,7 @@
       flex-direction: column;
       justify-content: space-around;
 
-      @include breakpoint-down(tablet) {
+      @include breakpoint-down(tab-port) {
         height: 80%;
         justify-content: center;
       }

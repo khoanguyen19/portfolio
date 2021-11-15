@@ -4,7 +4,7 @@
   display: flex;
   height: 100vh;
 
-  @include breakpoint-down(tablet) {
+  @include breakpoint-down(tab-port) {
     flex-direction: column;
   }
 
@@ -21,7 +21,7 @@
       justify-content: space-between;
       padding: 50px;
 
-      @include breakpoint-down(tablet) {
+      @include breakpoint-down(tab-port) {
         padding: 50px 40px;
         justify-content: center;
         text-align: center;
@@ -112,7 +112,7 @@
       bottom: 40px;
       left: 300px;
 
-      @include breakpoint-down(tablet) {
+      @include breakpoint-down(tab-port) {
         display: none;
       }
     }
@@ -135,6 +135,10 @@
     flex: 1;
     position: relative;
 
+    @include breakpoint-down(tab-port) {
+      flex: 2;
+    }
+
     &-bg {
       position: absolute;
       top: 0;
@@ -145,15 +149,7 @@
       background-color: $primaryColor;
 
       @include breakpoint-down(tab-port) {
-        clip-path: circle(69.3% at 88% 36%);
-      }
-
-      @include breakpoint-down(tablet) {
-        clip-path: circle(78.3% at 82% 27%);
-      }
-
-      @include breakpoint-down(mobile) {
-        clip-path: polygon(34% 0, 100% 0, 100% 100%, 33% 100%, 18% 51%);
+        clip-path: polygon(34% 0, 100% 0, 100% 100%, 33% 100%, 17% 51%);
       }
     }
 
@@ -163,7 +159,7 @@
       height: 100%;
       object-fit: cover;
 
-      @include breakpoint-down(tablet) {
+      @include breakpoint-down(tab-port) {
         object-fit: contain;
       }
 
